@@ -1,0 +1,53 @@
+
+PROYECTO PARTE III - INFORME
+Autor: Leonel Juan
+
+------------------------------------------------------------
+1. PROBLEMÁTICA
+------------------------------------------------------------
+El objetivo de este análisis es predecir la forma de compra de un vehículo (Contado o Financiado) a partir de los datos de patentamientos de enero de 2025 en Argentina. Esta información puede ser útil para concesionarios y entidades financieras a fin de anticipar las preferencias de los clientes y ajustar estrategias comerciales y crediticias.
+
+------------------------------------------------------------
+2. HIPÓTESIS
+------------------------------------------------------------
+Se plantea que ciertas características del vehículo (como la marca, tipo de motor, origen o precio) y su lugar de patentamiento (provincia) influyen significativamente en la decisión del comprador sobre financiar o pagar al contado.
+
+Hipótesis: "La forma de compra de un vehículo puede ser anticipada mediante variables estructurales del vehículo y su contexto de venta".
+
+------------------------------------------------------------
+3. VARIABLES RELEVANTES
+------------------------------------------------------------
+Variables independientes:
+- Marca
+- Modelo
+- Versión
+- Motor
+- Energía
+- Color
+- Origen
+- Precio_ARS
+- Provincia
+
+Variable dependiente:
+- Forma_Compra (target)
+
+------------------------------------------------------------
+4. METODOLOGÍA
+------------------------------------------------------------
+- Se utilizaron técnicas de codificación para transformar variables categóricas.
+- Se aplicó un modelo Random Forest para evaluar la importancia de las características.
+- Se realizó selección automática de features para reducir la dimensionalidad.
+- Se entrenó un modelo de clasificación con validación del 20% de los datos.
+
+------------------------------------------------------------
+5. INSIGHTS / HALLAZGOS
+------------------------------------------------------------
+- El modelo obtuvo un accuracy del 55%, con mejor desempeño para predecir compras "al contado".
+- El precio y el origen del vehículo demostraron ser variables con peso en la clasificación.
+- La clase "Financiado" es más difícil de predecir, lo que sugiere posible desbalance o influencia de variables no incluidas (como edad o ingresos del comprador).
+- El modelo puede servir como herramienta preliminar de apoyo para concesionarias, pero debería complementarse con más datos de clientes.
+
+------------------------------------------------------------
+6. CONCLUSIÓN
+------------------------------------------------------------
+El proyecto demuestra que, con los datos disponibles, es posible tener una primera aproximación al comportamiento de compra de los usuarios. Sin embargo, se recomienda ampliar el dataset e incorporar variables de perfil del comprador para mejorar la capacidad predictiva del modelo.
